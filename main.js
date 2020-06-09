@@ -29,7 +29,11 @@ function nextImage() {
   var activeCircle = $('.nav i.active');
 
   // Togliamo la classe active dalle variabili correnti
-  activeImage.removeClass('active');
+  activeImage.fadeOut(200,
+    function() {
+      activeImage.removeClass('active');
+    }
+  );
   activeCircle.removeClass('active');
 
   // Aggiungiamo la classe active all'img e cerchio sucessivo a rotazione
@@ -38,7 +42,10 @@ function nextImage() {
     $('.images .first').addClass('active');
     $('.nav i.first').addClass('active');
   } else {
-      activeImage.next('img').addClass('active');
+      activeImage.fadeIn(200,
+        function(){
+          activeImage.next('img').addClass('active');
+        });
       activeCircle.next('i').addClass('active');
     }
 }

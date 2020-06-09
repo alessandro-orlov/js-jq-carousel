@@ -26,6 +26,7 @@
 }
 .slider-wrapper .images img.active {
     display: inline-block;
+    opacity: 100;
 }
 .prev, .next {
     position: absolute;
