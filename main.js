@@ -31,16 +31,16 @@ function nextImage() {
   var nextActiveImage = activeImage.next()
 
   // Togliamo la classe active dalle variabili correnti
-  activeImage.fadeOut(200).removeClass('active').hide();
+  activeImage.fadeOut().removeClass('active').hide();
   activeCircle.removeClass('active');
 
   // Aggiungiamo la classe active all'img e cerchio sucessivo a rotazione
   // andando a destra
   if(activeImage.hasClass('last')) {
-    $('.images .first').fadeIn(500).addClass('active');
+    $('.images .first').fadeIn().addClass('active');
     $('.nav i.first').addClass('active');
   } else {
-      nextActiveImage.fadeIn(500).addClass('active');
+      nextActiveImage.fadeIn().addClass('active');
       activeCircle.next('i').addClass('active');
     }
 }
@@ -55,15 +55,15 @@ function prevImage() {
 
   // Aggiungiamo la classe active all'img e cerchio precedente a rotazione
   // andando a sinistra
-  activeImage.fadeOut(200).removeClass('active').hide();
+  activeImage.fadeOut().removeClass('active').hide();
   activeCircle.removeClass('active');
 
   // Togliamo la classe active
   if(activeImage.hasClass('first')) {
-    $('.images img.last').fadeIn(500).addClass('active');
+    $('.images img.last').fadeIn().addClass('active');
     $('.nav i.last').addClass('active');
   } else {
-      prevActiveImage.fadeIn(500).addClass('active');
+      prevActiveImage.fadeIn().addClass('active');
       activeCircle.prev('i').addClass('active');
     }
 }
