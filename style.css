@@ -26,7 +26,8 @@
 }
 .slider-wrapper .images img.active {
     display: inline-block;
-    opacity: 100;
+    transform: rotateX(360deg);
+    transition: 1s;
 }
 .prev, .next {
     position: absolute;
